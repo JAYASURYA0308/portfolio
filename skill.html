@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>JS Skills</title>
+  <link rel="icon" href="icon.png">
+  <link rel='stylesheet' href='style.css'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">Portfolio</a>
+
+    <nav class="navbar">
+      <a href="index.html" style="--i:1" class="active">Home</a>
+      <a href="about.html" style="--i:2">About</a>
+      <a href="skill.html" style="--i:3">Skill</a>
+      <a href="project.html" style="--i:4">Project</a>
+      <a href="contact.html" style="--i:5">Contact</a>
+    </nav>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars open-icon"></i>
+      <i class="fas fa-times close-icon" style="display: none;"></i>
+    </div>
+  </header>
+
+  <!-- Skill Section -->
+  <main>
+    <h1 class="sub-title">My <span>Skills</span></h1>
+
+    <section class="skilll" id="skilll">
+      <!-- Technical Skills -->
+      <div class="container1" id="skills">
+        <h1 class="heading1">Technical Skills</h1>
+        <div class="Technical-bars">
+          <div class="bar"><i class="fa-brands fa-html5" style="color: #c95d2e;"></i>
+            <div class="info"><span>HTML</span></div>
+            <div class="progress-line html"><span></span></div>
+          </div>
+          <div class="bar"><i class="fa-brands fa-css3-alt" style="color: #147bbc;"></i>
+            <div class="info"><span>CSS</span></div>
+            <div class="progress-line css"><span></span></div>
+          </div>
+          <div class="bar"><i class="fa-brands fa-js" style="color: #b0bc1e;"></i>
+            <div class="info"><span>JavaScript</span></div>
+            <div class="progress-line JavaScript"><span></span></div>
+          </div>
+          <div class="bar"><i class="fa-brands fa-java" style="color: #1789cf;"></i>
+            <div class="info"><span>Java</span></div>
+            <div class="progress-line Java"><span></span></div>
+          </div>
+          <div class="bar"><i class="fa-solid fa-leaf" style="color: rgb(35, 217, 35);"></i>
+            <div class="info"><span>MongoDB</span></div>
+            <div class="progress-line MongoDB"><span></span></div>
+          </div>
+          <div class="bar"><i class="fa-solid fa-laptop-code" style="color: aquamarine;"></i>
+            <div class="info"><span>ExpressJS</span></div>
+            <div class="progress-line ExpressJS"><span></span></div>
+          </div>
+          <div class="bar"><i class="fa-brands fa-react" style="color: #0ef;"></i>
+            <div class="info"><span>React</span></div>
+            <div class="progress-line React"><span></span></div>
+          </div>
+          <div class="bar"><i class="fa-brands fa-node-js" style="color: rgb(198, 41, 198);"></i>
+            <div class="info"><span>NodeJS</span></div>
+            <div class="progress-line NodeJS"><span></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Skills -->
+      <div class="container1">
+        <h1 class="heading1">Professional Skills</h1>
+        <div class="radial-bars">
+          <div class="radial-bar">
+            <svg viewBox="0 0 200 200">
+              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+            </svg>
+            <div class="percentage">90%</div>
+            <div class="text">Creativity</div>
+          </div>
+          <div class="radial-bar">
+            <svg viewBox="0 0 200 200">
+              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+            </svg>
+            <div class="percentage">80%</div>
+            <div class="text">Communication</div>
+          </div>
+          <div class="radial-bar">
+            <svg viewBox="0 0 200 200">
+              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+            </svg>
+            <div class="percentage">70%</div>
+            <div class="text">Problem Solving</div>
+          </div>
+          <div class="radial-bar">
+            <svg viewBox="0 0 200 200">
+              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+            </svg>
+            <div class="percentage">85%</div>
+            <div class="text">Teamwork</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Navbar toggle script -->
+  <script>
+    function setupNavbarToggle() {
+      const menuToggle = document.getElementById('menu-toggle');
+      const navbar = document.querySelector('.navbar');
+      const openIcon = menuToggle?.querySelector('.open-icon');
+      const closeIcon = menuToggle?.querySelector('.close-icon');
+
+      if (!menuToggle || !navbar || !openIcon || !closeIcon) return;
+
+      menuToggle.addEventListener('click', function () {
+        const isActive = navbar.classList.toggle('active');
+        openIcon.style.display = isActive ? 'none' : 'inline';
+        closeIcon.style.display = isActive ? 'inline' : 'none';
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', setupNavbarToggle);
+  </script>
+</body>
+
+</html>
